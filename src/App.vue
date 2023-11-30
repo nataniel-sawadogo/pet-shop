@@ -1,9 +1,12 @@
+<script lang="ts" setup>
+  import HeaderItem from './components/HeaderItem.vue';
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <HeaderItem />
+  <div class="main-container">
+    <router-view/>
+  </div>
 </template>
 
 <style>
@@ -12,19 +15,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--text);
+  background: var(--background);
+  height: 100vh;
+  width: 100%;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.main-container{
+  height: 90%;
+  width: 100%;
 }
 </style>

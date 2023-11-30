@@ -1,0 +1,10 @@
+:root{
+    --text: #ffffff;
+    --text-secondary:#ffffffad;
+    --background: #000000;
+    --primary: #2e0d00;
+    --secondary: #b07243;
+    --accent: #ff5400;
+
+    --transition-time: 0.3s;
+}
