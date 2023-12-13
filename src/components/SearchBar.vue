@@ -1,0 +1,38 @@
+<template>
+    <div class="contain">
+        <input type="text" placeholder="Search breeds">
+        <i class="search"></i>
+    </div>
+</template>
+
+<style scoped>
+
+     /*Modify this class to move the search bar around, or reduce the space it takes up. It is the container for the search bar itself */
+    .contain{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0% 5%;
+        height: 12vh;
+        /* border: red 1px solid; */
+    }
+
+    input{
+        border-radius: 3em;
+        height: 45%;
+        width: 25%;
+        padding: 0 2%;
+        border: none;
+        background-color: var(--text);
+    }
+
+    .search{
+        height: 1rem;
+        width: 1rem;
+        /* background-image: url(/img/site_icons/search.svg); */
+        background-image: url(../../public/img/);
+        background-size: 100% 100%;
+    }
+
+</style>

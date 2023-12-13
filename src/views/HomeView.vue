@@ -2,6 +2,8 @@
     import types from "../data/types.json"
     import { ref } from "vue";
 
+    import SearchBar from "@/components/SearchBar.vue";
+
     let type = ref(types[0])
     let selected = ref(0)
     let more = ref(false)
@@ -30,6 +32,7 @@
             </div>
         </nav>
     </div>
+    <SearchBar />
 </template>
 
 <style scoped>
@@ -60,6 +63,7 @@
         /* border: red 1px solid; */
         justify-content: space-between;
         align-items: center;
+        transform: translateY(20%);
     }
 
     
