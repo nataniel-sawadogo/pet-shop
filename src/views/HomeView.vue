@@ -3,6 +3,7 @@
     import { ref } from "vue";
 
     import SearchBar from "@/components/SearchBar.vue";
+    import CardContainer from "@/components/containers/CardContainer.vue"
 
     let type = ref(types[0])
     let selected = ref(0)
@@ -17,25 +18,34 @@
 </script>
 
 <template>
-    <div class="container">
-        <nav>
-            <h1 class="title">{{ type }}</h1>
-            <div id="types">
-                <button
-                    v-for="t,index in types"
-                    :key="index"
-                    class="button"
-                    :class="{active : selected == index}"
-                    @click="changeType(index)"
-                >{{ t }}</button>
-                <span id="plus" @click="more = !more" :class="{active : more}">+</span>
-            </div>
-        </nav>
-    </div>
+    <div class="container-m">
+        <div class="container">
+            <nav>
+                <h1 class="title">{{ type }}</h1>
+                <div id="types">
+                    <button
+                        v-for="t,index in types"
+                        :key="index"
+                        class="button"
+                        :class="{active : selected == index}"
+                        @click="changeType(index)"
+                    >{{ t }}</button>
+                    <span id="plus" @click="more = !more" :class="{active : more}">+</span>
+                </div>
+            </nav>
+        </div>
     <SearchBar />
+    <CardContainer />
+    </div>
 </template>
 
 <style scoped>
+
+    .container-m{
+        background: linear-gradient(to bottom, rgba(0,0,0,1)0%, rgba(0,0,0,0.7)60%, rgba(0,0,0,0.7)100%), url(../../public/img/german_sheperd.png);
+        height: 100%;
+        background-size: 100% 120%;
+    }
 
     .container{
         display: flex;

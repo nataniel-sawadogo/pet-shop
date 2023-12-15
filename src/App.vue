@@ -16,7 +16,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: var(--text);
-  background: var(--background);
+  /* background: var(--background); */
   height: 100vh;
   width: 100%;
 }

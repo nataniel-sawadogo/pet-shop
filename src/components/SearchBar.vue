@@ -15,6 +15,7 @@
         align-items: center;
         padding: 0% 5%;
         height: 12vh;
+        position: relative;
         /* border: red 1px solid; */
     }
 
@@ -28,11 +29,13 @@
     }
 
     .search{
-        height: 1rem;
-        width: 1rem;
+        height: 1.2rem;
+        width: 1.2rem;
         /* background-image: url(/img/site_icons/search.svg); */
-        background-image: url(../../public/img/);
+        background-image: url(../../public/img/site_icons/search.svg);
         background-size: 100% 100%;
+        position: absolute;
+        left: 25%;
     }
 
 </style>
