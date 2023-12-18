@@ -1,0 +1,28 @@
+{
+    "dogs":[
+        {
+            "id": 1,
+            "name": "German Sheperd"
+        },
+        {
+            "id": 2,
+            "name": "Golden Retriever"
+        },
+        {
+            "id": 3,
+            "name": "Bulldog"
+        },
+        {
+            "id": 4,
+            "name": "Dalmatian"
+        },
+        {
+            "id": 5,
+            "name": "Rotweiler"
+        },
+        {
+            "id": 6,
+            "name": "Poodle"
+        }
+    ]
+}

@@ -1,8 +1,15 @@
+<script setup lang="ts">
+import { defineProps } from 'vue';
+
+//eslint-disable-next-line
+const { breed } = defineProps(['breed'])
+</script>
+
 <template>
     <div class="card">
         <div id="img"></div>
         <div id="name">
-            <p>Breed</p>
+            <p>{{ breed.name }}</p>
         </div>
     </div>
 </template>

@@ -1,21 +1,17 @@
 <script setup lang="ts">
     import CardItem from '../CardItem.vue';
+    import breedsList from '../../data/breeds.json'
+
+    const breeds = breedsList.dogs
 </script>
 
 <template>
     <div class="contain-card">
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
+        <CardItem 
+            v-for="breed in breeds"
+            :key = "breed.id"
+            :breed = "breed"
+        />
     </div>
 </template>
 
