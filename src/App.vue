@@ -11,7 +11,6 @@
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -24,5 +23,10 @@
 .main-container{
   height: 90%;
   width: 100%;
+}
+
+button{
+  border-radius: 1.5em;
+  border: none;
 }
 </style>

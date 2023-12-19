@@ -10,6 +10,14 @@ const routes: Array<RouteRecordRaw> = [
       title: "Home"
     }
   },
+  {
+    path: '/breeds',
+    name: 'breeds',
+    component: () => import('@/views/BreedView.vue'),
+    meta: {
+      title: "Breeds"
+    }
+  }
   // {
   //   path: '/about',
   //   name: 'about',
