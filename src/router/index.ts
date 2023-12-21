@@ -17,7 +17,27 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: "Breeds"
     }
-  }
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import('@/views/ContactView.vue'),
+    meta: {
+      title: "Contact Us"
+    } 
+  },
+  {
+    path: '/404',
+    name: 'name',
+    component: () => import('@/views/404View.vue'),
+    meta: {
+      title: "Page Not Found"
+    }
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: "/404",
+  },
   // {
   //   path: '/about',
   //   name: 'about',

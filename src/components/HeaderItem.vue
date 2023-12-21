@@ -12,7 +12,7 @@
     <div class="container">
         <nav>
             <ul>
-                <li class="active-link" @click="goto('/home')">Home</li>
+                <li class="active-link" @click="goto('/')">Home</li>
                 <li @click="goto('/about')">About</li>
                 <li @click="goto('/services')">Services</li>
                 <li @click="goto('/contact')">Contact Us</li>

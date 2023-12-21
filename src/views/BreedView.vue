@@ -1,3 +1,7 @@
+<!-- <script setup lang="ts">
+
+</script> -->
+
 <template>
     <div class="contain-breed">
         <div class="description-container">
@@ -17,7 +21,7 @@
             </div>
         </div>
         <div class="buttons">
-            <button>Back</button>
+            <button><router-link to="/">Back</router-link></button>
             <button><p>Adopt</p></button>
         </div>
     </div>
@@ -80,6 +84,7 @@
         font-size: 2rem;
         border-radius: 1.5rem;
         cursor: pointer;
+        overflow: hidden;
     }
 
     .buttons{
@@ -139,6 +144,17 @@
 
     .buttons :nth-child(1):hover{
         background-color: rgb(91, 91, 91);
+    }
+
+    a{
+        color: var(--text);
+        text-decoration: none;
+        background-color: transparent;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 

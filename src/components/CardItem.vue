@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
+import { useRouter } from 'vue-router';
 
+const router = useRouter()
+const goto = (route :string) => {
+    router.push(route)
+}
 //eslint-disable-next-line
 const { breed } = defineProps(['breed'])
 </script>
 
 <template>
-    <div class="card">
+    <div class="card" @click="goto('/breeds')">
         <div id="img"></div>
         <div id="name">
             <p>{{ breed.name }}</p>
