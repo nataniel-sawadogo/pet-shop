@@ -27,6 +27,22 @@ const routes: Array<RouteRecordRaw> = [
     } 
   },
   {
+    path: '/about',
+    name: 'about',
+    component: () => import('@/views/AboutView.vue'),
+    meta: {
+      title: "About Us"
+    } 
+  },
+  {
+    path: '/services',
+    name: 'services',
+    component: () => import('@/views/ServicesView.vue'),
+    meta: {
+      title: "Services"
+    } 
+  },
+  {
     path: '/404',
     name: 'name',
     component: () => import('@/views/404View.vue'),
