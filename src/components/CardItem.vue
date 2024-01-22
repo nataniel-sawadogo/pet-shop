@@ -115,5 +115,12 @@ const { breed } = defineProps(['breed'])
         background-color: var(--secondary);
     }
 
+    @media (max-width: 431px){
+        .card{
+            height: 45%;
+            width: 90vw;
+        }
+    }
+
 
 </style>

@@ -111,4 +111,19 @@
         transform: rotateZ(45deg);
     }
 
+    @media (max-width: 431px){
+        #types button{
+            display: none;
+        }
+
+        #types{
+            justify-content: flex-end;
+        }
+
+        #plus{
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    }
+
 </style>
