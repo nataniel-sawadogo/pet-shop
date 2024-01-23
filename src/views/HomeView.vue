@@ -122,7 +122,12 @@
 
         #plus{
             font-size: 3rem;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .container-m{
+            background-size: cover;
+            background-position: center;
         }
     }
 

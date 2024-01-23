@@ -1,10 +1,14 @@
 <script setup lang="ts">
     import { useRouter } from 'vue-router';
+    import { useRoute } from 'vue-router';
     import { ref } from 'vue';
 
     const router = useRouter()
+    let route = useRoute()
     const show = ref(false)
-
+    const r = ref()
+    r.value = route.fullPath
+    
     const goto = (route :string) => {
         router.push(route)
     }
@@ -14,12 +18,12 @@
     <div class="container">
         <nav :class="{display:show}">
             <ul>
-                <li class="active-link" @click="goto('/')">Home</li>
-                <li @click="goto('/about')">About</li>
-                <li @click="goto('/services')">Services</li>
-                <li @click="goto('/contact')">Contact Us</li>
+                <li :class="{'active-link': r == '/'}" @click="goto('/'); show = !show; r ='/'">Home</li>
+                <li :class="{'active-link': r == '/about'}" @click="goto('/about'); show = !show; r ='/about'">About</li>
+                <li :class="{'active-link': r == '/services'}" @click="goto('/services'); show = !show; r = '/services'">Services</li>
+                <li :class="{'active-link': r == '/contact'}" @click="goto('/contact'); show = !show; r = '/contact'">Contact Us</li>
             </ul>
-            <div id="burger" @click="show = !show">
+            <div id="burger" @click="show = !show" :class="{active:show}">
                 <i class="uil uil-bars"></i>
             </div>
         </nav>
@@ -103,6 +107,15 @@
         width: 100%;
     }
 
+    @keyframes slide {
+        0%{
+            transform: translateX(80vw);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+
     @media (max-width: 431px){
         nav ul{
             display: none;
@@ -117,13 +130,28 @@
         #burger{
             display: block;
             width: 100%;
+            height: 100%;
             display: flex;
             justify-content: flex-end;
+            align-items: center;
             z-index: 2;
+            position: relative;
         }
 
         #burger i{
             font-size: 2rem;
+        }
+
+        #burger.active::after{
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            border-bottom: white 3px solid;
+            z-index: 2;
+            bottom: 3vh;
+            transition: var(--transition-time);
+            /* left: 0; */
         }
 
         .display{
@@ -133,6 +161,7 @@
             right: 0;
             z-index: 10;
             width: 80%;
+            animation: slide 0.4s;
         }
 
         .display::before{
@@ -157,7 +186,21 @@
         }
 
         .display ul{
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 100%;
+            gap: 6vh;
         }
+
+        .active{
+            height: 15vh !important;
+        }
+
+        li::after{
+            width: 100%;
+            bottom: -3vh;
+        }
+
     }
 </style>

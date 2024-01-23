@@ -44,4 +44,24 @@
         width: 90%;
         text-align: justify;
     }
+
+    @media (max-width: 431px){
+        #back{
+            flex-wrap: wrap;
+            overflow-y: scroll;
+            flex-direction: row;
+            padding: 4vh 0;
+            width: 88%;
+        }
+
+        p{
+            text-align: left;
+            line-height: 1.7rem;
+        }
+
+        .container-a{
+            background-size: cover;
+            background-position: center;
+        }
+    }
 </style>
