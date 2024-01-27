@@ -38,4 +38,16 @@
         left: 25%;
     }
 
+    @media (max-width: 431px){
+        input {
+            width: 100%;
+            padding: 0 5%;
+            font-size: 1.1rem;
+        }
+
+        .search{
+            left: 85%;
+        }
+    }
+
 </style>

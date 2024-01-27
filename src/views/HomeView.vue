@@ -111,4 +111,24 @@
         transform: rotateZ(45deg);
     }
 
+    @media (max-width: 431px){
+        #types button{
+            display: none;
+        }
+
+        #types{
+            justify-content: flex-end;
+        }
+
+        #plus{
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .container-m{
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
 </style>

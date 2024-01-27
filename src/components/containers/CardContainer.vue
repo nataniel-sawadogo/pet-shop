@@ -44,4 +44,10 @@
         width: 5px;
     }
 
+    @media (max-width: 431px){
+        .contain-card{
+            
+        }
+    }
+
 </style>
