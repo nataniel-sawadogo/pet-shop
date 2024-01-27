@@ -84,4 +84,20 @@
     .card:hover::after{
         height: 100%;
     }
+
+    @media (max-width: 431px){
+        .container-s{
+            flex-wrap: wrap;
+            overflow-y: scroll;
+            justify-content: center;
+            gap: 5vh;
+            padding: 5vh 0;
+        }
+
+        .card{
+            width: 80vw;
+            height: 50%;
+            padding: 2vh 0;
+        }
+    }
 </style>

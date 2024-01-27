@@ -218,4 +218,25 @@ const more = ref(false)
         gap: 5px;
     }
 
+    @media(max-width: 431px){
+        #info{
+            display: none;
+        }
+
+        .form{
+            width: 90vw;
+            padding: 0 3vw;
+            backdrop-filter: blur(5px);
+        }
+
+        button{
+            width: 40vw;
+        }
+
+        .contain-contact{
+            background-size: cover;
+            background-position: 80%;
+        }
+    }
+
 </style>
