@@ -1,27 +1,33 @@
 <script setup lang="ts">
     import { useRouter } from 'vue-router';
     import { useRoute } from 'vue-router';
-    import { ref } from 'vue';
+    import { ref, watch } from 'vue';
 
     const router = useRouter()
-    let route = useRoute()
+    const route = ref(useRoute())
     const show = ref(false)
     const r = ref()
-    r.value = route.fullPath
+    r.value = route.value
     
     const goto = (route :string) => {
         router.push(route)
     }
+
+    watch(route.value, (newR) => {
+        console.log(newR.fullPath)
+        r.value = newR.fullPath
+    })
+
 </script>
 
 <template>
     <div class="container">
         <nav :class="{display:show}">
             <ul>
-                <li :class="{'active-link': r == '/'}" @click="goto('/'); show = !show; r ='/'">Home</li>
-                <li :class="{'active-link': r == '/about'}" @click="goto('/about'); show = !show; r ='/about'">About</li>
-                <li :class="{'active-link': r == '/services'}" @click="goto('/services'); show = !show; r = '/services'">Services</li>
-                <li :class="{'active-link': r == '/contact'}" @click="goto('/contact'); show = !show; r = '/contact'">Contact Us</li>
+                <li :class="{'active-link': r == '/'}" @click="goto('/'); show = !show">Home</li>
+                <li :class="{'active-link': r == '/about'}" @click="goto('/about'); show = !show">About</li>
+                <li :class="{'active-link': r == '/services'}" @click="goto('/services'); show = !show">Services</li>
+                <li :class="{'active-link': r == '/contact'}" @click="goto('/contact'); show = !show">Contact Us</li>
             </ul>
             <div id="burger" @click="show = !show" :class="{active:show}">
                 <i class="uil uil-bars"></i>
