@@ -157,5 +157,39 @@
         align-items: center;
     }
 
+    @media (max-width: 431px){
+        .description-container{
+            flex-direction: column;
+        }
+
+        .left, .right{
+            width: 90vw;
+        }
+
+        #img{
+            width: 100%;
+            height: 30vh;
+        }
+
+        .contain-breed{
+            /* flex-wrap: wrap; */
+            overflow-y: scroll;
+            min-height: 90vh;
+            height: auto;
+        }
+
+        .buttons{
+            height: 25%;
+            flex-direction: column-reverse;
+            gap: 2vh;
+            padding: 5% 5%;
+            justify-content: center;
+        }
+
+        .buttons button{
+            width: 80vw;
+            height: 10vh;
+        }
+    }
 
 </style>
