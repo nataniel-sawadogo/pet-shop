@@ -2,27 +2,33 @@
     "dogs":[
         {
             "id": 1,
-            "name": "German Sheperd"
+            "name": "German Sheperd",
+            "photo": "german_sheperd2.webp"
         },
         {
             "id": 2,
-            "name": "Golden Retriever"
+            "name": "Golden Retriever",
+            "photo": "golden_retriever.jpg"
         },
         {
             "id": 3,
-            "name": "Bulldog"
+            "name": "Bulldog",
+            "photo": "bulldog.webp"
         },
         {
             "id": 4,
-            "name": "Dalmatian"
+            "name": "Dalmatian",
+            "photo": "dalmatian.jpg"
         },
         {
             "id": 5,
-            "name": "Rotweiler"
+            "name": "Rotweiler",
+            "photo": "rotweiler.webp"
         },
         {
             "id": 6,
-            "name": "Poodle"
+            "name": "Poodle",
+            "photo": "poodle.jpeg"
         }
     ]
 }
