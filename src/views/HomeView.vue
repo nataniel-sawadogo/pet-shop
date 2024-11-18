@@ -42,7 +42,7 @@
 <style scoped>
 
     .container-m{
-        background: linear-gradient(to bottom, rgba(0,0,0,1)0%, rgba(0,0,0,0.7)60%, rgba(0,0,0,0.7)100%), url(../../public/img/german_sheperd.png);
+        background: linear-gradient(to bottom, rgba(0,0,0,1)0%, rgba(0,0,0,0.7)60%, rgba(0,0,0,0.7)100%), url(../assets/german_sheperd.png) !important;
         height: 100%;
         background-size: 100% 120%;
     }
